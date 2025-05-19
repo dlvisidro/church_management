@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields, api # Import necessary Odoo modules
+from odoo import models, fields # Import necessary Odoo modules
 
 class CmmMember(models.Model):
     """

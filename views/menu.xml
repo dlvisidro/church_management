@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem 
+            id="menu_member_management_root" 
+            name="Membership" 
+            sequence="10"/>
+
+        <menuitem 
+            id="menu_member_partners" 
+            name="Members" 
+            parent="menu_member_management_root" 
+            action="action_member_partners" 
+            sequence="10"/>
+        
+        <menuitem 
+            id="menu_ministries" 
+            name="Ministries" 
+            parent="menu_member_management_root" 
+            action="action_ministry" 
+            sequence="10"/>
+    </data>
+</odoo>

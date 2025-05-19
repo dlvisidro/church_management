@@ -23,6 +23,8 @@
     'data': [
         'security/ir.model.access.csv',
         'views/res_partner.xml',
+        'views/cmm_ministry.xml',
+        'views/menu.xml'
     ],
     # only loaded in demonstration mode
     'demo': [
