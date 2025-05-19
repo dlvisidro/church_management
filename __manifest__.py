@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Church Member Management",
+    'name': "Church Management",
 
     'summary': """
         Manage members, seminar attendance, and application details.""",
