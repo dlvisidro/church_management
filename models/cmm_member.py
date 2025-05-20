@@ -8,12 +8,14 @@ class CmmMember(models.Model):
     """
     _name = "cmm.member"
 
-    partner_id = fields.Many2one('res.partner', 'Partner', required=True)
+    partner_id = fields.Many2one('res.partner', 'Partner', required=True, ondelete='cascade')
 
     # Seminar attendance fields
     # These are Boolean fields, True if attended, False otherwise.
     has_attended_seminar_1 = fields.Boolean(string="Attended Seminar 1")
     has_attended_seminar_2 = fields.Boolean(string="Attended Seminar 2")
+    has_attended_gc = fields.Boolean("Attended Gospel Clarity")
+    has_attended_ctoa = fields.Boolean("Attended Committing to One Another")
 
     # Application form field
     # This is a Binary field to store file uploads (e.g., PDF, Word document).
@@ -41,11 +43,11 @@ class CmmMember(models.Model):
 
     is_active = fields.Boolean(string="Is Active", default=True) # Indicates if the member/attendee is active
 
-    date_of_baptism = fields.Date(string="Date of Baptism")
-    date_of_first_attendance = fields.Date(string="Date of First Attendance")
+    date_of_baptism = fields.Date(string="Baptism Date")
+    date_of_first_attendance = fields.Date(string="Date First Attended")
     # Date of Membership field
     # This is a Date field to store the date when the person became a member.
-    date_of_membership = fields.Date(string="Date of Membership")
+    date_of_membership = fields.Date(string="Right Hand Of Fellowship")
 
     # Reason for leaving field
     # This is a Text field for a multi-line explanation.
