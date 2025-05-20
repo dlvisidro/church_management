@@ -2,21 +2,21 @@
 <odoo>
     <data>
         <menuitem 
-            id="menu_member_management_root" 
+            id="menu_member_root" 
             name="Membership" 
             sequence="10"/>
 
         <menuitem 
-            id="menu_member_partners" 
+            id="menu_members" 
             name="Members" 
-            parent="menu_member_management_root" 
-            action="action_member_partners" 
+            parent="menu_member_root" 
+            action="action_members" 
             sequence="10"/>
         
         <menuitem 
             id="menu_ministries" 
             name="Ministries" 
-            parent="menu_member_management_root" 
+            parent="menu_member_root" 
             action="action_ministry" 
             sequence="10"/>
     </data>

@@ -7,13 +7,12 @@ class CmmMember(models.Model):
     Extends the res.partner model to add member-specific fields.
     """
     _name = "cmm.member"
+    _inherits = {"res.partner": "partner_id"}
 
     partner_id = fields.Many2one('res.partner', 'Partner', required=True, ondelete='cascade')
 
     # Seminar attendance fields
     # These are Boolean fields, True if attended, False otherwise.
-    has_attended_seminar_1 = fields.Boolean(string="Attended Seminar 1")
-    has_attended_seminar_2 = fields.Boolean(string="Attended Seminar 2")
     has_attended_gc = fields.Boolean("Attended Gospel Clarity")
     has_attended_ctoa = fields.Boolean("Attended Committing to One Another")
 
@@ -52,3 +51,9 @@ class CmmMember(models.Model):
     # Reason for leaving field
     # This is a Text field for a multi-line explanation.
     reason_for_leaving = fields.Text(string="Reason for Leaving")
+
+    # inherited from res.partner
+    name = fields.Char(related="partner_id.name", inherited=True, readonly=False)
+    email = fields.Char(related="partner_id.email", inherited=True, readonly=False)
+    phone = fields.Char(related="partner_id.phone", inherited=True, readonly=False)
+    mobile = fields.Char(related="partner_id.mobile", inherited=True, readonly=False)

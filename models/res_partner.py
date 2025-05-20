@@ -10,9 +10,9 @@ class ResPartner(models.Model):
 
     is_church_member = fields.Boolean(string="Church Member")
 
-    member_details_id = fields.One2many("cmm.member", "partner_id", string="Member Details")
+    # member_details_id = fields.One2many("cmm.member", "partner_id", string="Member Details")
 
-    ministry_ids = fields.Many2many("cmm.ministry", "cmm_partner_ministry_rel", "partner_id", "ministry_id")
+    # ministry_ids = fields.Many2many("cmm.ministry", "cmm_partner_ministry_rel", "partner_id", "ministry_id")
 
     # status = fields.Selection(related="member_details_id.status", default="member", readonly=False, store=True)
     # date_of_membership = fields.Date(related="member_details_id.date_of_membership", readonly=False, store=True)
