@@ -4,10 +4,11 @@
         <!-- Form View -->
         <record id="mm_ministries_form" model="ir.ui.view">
             <field name="name">cmm.ministries.form</field>
-            <field name="model">cmm.ministries</field>
+            <field name="model">cmm.ministry</field>
             <field name="arch" type="xml">
                 <form>
                     <sheet>
+                        <group>
                         <group>
                             <field name="name"/>
                             <field name="description"/>
@@ -15,6 +16,8 @@
                         <group>
                             <field name="in_charge"/>
                         </group>
+                        </group>
+                        <field name="member_ids"/>
                     </sheet>
                 </form>
             </field>
@@ -25,11 +28,11 @@
             <field name="name">cmm.ministry.list</field>
             <field name="model">cmm.ministry</field>
             <field name="arch" type="xml">
-                <tree>
+                <list>
                     <field name="name"/>
                     <field name="description"/>
                     <field name="in_charge"/>
-                </tree>
+                </list>
             </field>
         </record>
 
