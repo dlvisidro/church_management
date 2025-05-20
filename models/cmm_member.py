@@ -57,3 +57,7 @@ class CmmMember(models.Model):
     email = fields.Char(related="partner_id.email", inherited=True, readonly=False)
     phone = fields.Char(related="partner_id.phone", inherited=True, readonly=False)
     mobile = fields.Char(related="partner_id.mobile", inherited=True, readonly=False)
+    street = fields.Char(related="partner_id.street", inherited=True, readonly=False)
+    street2 = fields.Char(related="partner_id.street2", inherited=True, readonly=False)
+    city = fields.Char(related="partner_id.city", inherited=True, readonly=False)
+    zip = fields.Char(related="partner_id.zip", inherited=True, readonly=False)

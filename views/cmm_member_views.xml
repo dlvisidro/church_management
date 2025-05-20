@@ -17,6 +17,17 @@
                         </div>
                         <group>
                             <group>
+                                <!-- <div class="o_address_format"> -->
+                                    <field name="street" placeholder="Street..." class="o_address_street"/>
+                                    <field name="street2" placeholder="Street 2..." class="o_address_street"/>
+                                    <field name="city" placeholder="City" class="o_address_city"/>
+                                    <field name="zip" placeholder="ZIP" class="o_address_zip"/>
+                                    <!-- <div name="partner_address_country" class="d-flex justify-content-between"> -->
+                                        <field name="country_id" placeholder="Country" options='{"no_open": True, "no_create": True}'/>
+                                    <!-- </div> -->
+                                <!-- </div> -->
+                            </group>
+                            <group>
                                 <field name="email"/>
                                 <field name="phone"/>
                                 <field name="mobile"/>
@@ -57,6 +68,7 @@
                     <field name="email"/>
                     <field name="mobile"/>
                     <field name="phone"/>
+                    <field name="city"/>
                 </list>
             </field>
         </record>
