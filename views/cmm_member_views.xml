@@ -46,7 +46,9 @@
                                     </group>
                                 </group>
                             </page>
-                            <page string="Ministries"/>
+                            <page string="Ministries">
+                                <field name="ministry_ids"/>
+                            </page>
                             <page string="Requirements"/>
                             <page string="Family Members"/>
                             <page string="Notes"/>

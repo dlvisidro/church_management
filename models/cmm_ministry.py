@@ -10,6 +10,6 @@ class CmmMinistry(models.Model):
 
     name = fields.Char()
     description = fields.Text()
-    in_charge = fields.Many2one('res.partner')
+    in_charge = fields.Many2one('cmm.member')
 
-    member_ids = fields.Many2many("res.partner", "cmm_partner_ministry_rel", "ministry_id", "partner_id")
+    member_ids = fields.Many2many("cmm.member", "cmm_member_ministry_rel", "ministry_id", "member_id")
