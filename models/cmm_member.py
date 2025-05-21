@@ -44,6 +44,7 @@ class CmmMember(models.Model):
 
     is_active = fields.Boolean(string="Is Active", default=True) # Indicates if the member/attendee is active
 
+    birthday = fields.Date(string="Birthday")
     date_of_baptism = fields.Date(string="Baptism Date")
     date_of_first_attendance = fields.Date(string="Date First Attended")
     # Date of Membership field

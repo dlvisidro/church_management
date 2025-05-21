@@ -16,6 +16,7 @@
                                 <field name="in_charge_id"/>
                             </group>
                         </group>
+                        <label for="member_ids"/>
                         <field name="member_ids"/>
                     </sheet>
                 </form>

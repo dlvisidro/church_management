@@ -12,4 +12,4 @@ class CmmMinistry(models.Model):
     description = fields.Text()
     in_charge = fields.Many2one('cmm.member')
 
-    member_ids = fields.Many2many("cmm.member", "cmm_member_ministry_rel", "ministry_id", "member_id")
+    member_ids = fields.Many2many("cmm.member", "cmm_member_ministry_rel", "ministry_id", "member_id", string="Members")
