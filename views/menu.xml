@@ -12,7 +12,14 @@
             parent="menu_member_root" 
             action="action_members" 
             sequence="10"/>
-        
+    
+        <menuitem
+            id="menu_care_groups"
+            name="Care Groups"
+            parent="menu_member_root"
+            action="action_care_group"
+            sequence="10"/>
+
         <menuitem 
             id="menu_ministries" 
             name="Ministries" 

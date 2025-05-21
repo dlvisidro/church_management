@@ -14,6 +14,7 @@
                             <h1>
                                 <field id="individual" options="{'line_breaks': False}" widget="text" class="text-break" name="name" default_focus="1" placeholder="e.g. Brandon Freeman" invisible="is_company" required="type == 'contact'"/>
                             </h1>
+                            <field name="care_group_id"/>
                         </div>
                         <group>
                             <group>

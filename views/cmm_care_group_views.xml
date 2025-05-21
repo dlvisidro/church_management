@@ -2,19 +2,18 @@
 <odoo>
     <data>
         <!-- Form View -->
-        <record id="mm_ministries_form" model="ir.ui.view">
-            <field name="name">cmm.ministries.form</field>
-            <field name="model">cmm.ministry</field>
+        <record id="cmm_care_group_form" model="ir.ui.view">
+            <field name="name">cmm.care.group.form</field>
+            <field name="model">cmm.care.group</field>
             <field name="arch" type="xml">
                 <form>
                     <sheet>
                         <group>
                             <group>
                                 <field name="name"/>
-                                <field name="description"/>
                             </group>
                             <group>
-                                <field name="in_charge"/>
+                                <field name="in_charge_id"/>
                             </group>
                         </group>
                         <field name="member_ids"/>
@@ -24,25 +23,24 @@
         </record>
 
         <!-- List View -->
-        <record id="cmm_ministry_list" model="ir.ui.view">
-            <field name="name">cmm.ministry.list</field>
-            <field name="model">cmm.ministry</field>
+        <record id="cmm_care_group_list" model="ir.ui.view">
+            <field name="name">cmm.care.group.list</field>
+            <field name="model">cmm.care.group</field>
             <field name="arch" type="xml">
                 <list>
                     <field name="name"/>
-                    <field name="description"/>
-                    <field name="in_charge"/>
+                    <field name="in_charge_id"/>
                 </list>
             </field>
         </record>
 
-        <record id="action_ministry" model="ir.actions.act_window">
-            <field name="name">Ministries</field>
-            <field name="res_model">cmm.ministry</field>
+        <record id="action_care_group" model="ir.actions.act_window">
+            <field name="name">Care Groups</field>
+            <field name="res_model">cmm.care.group</field>
             <field name="view_mode">list,form</field>
             <field name="help" type="html">
                 <p class="o_view_nocontent_smiling_face">
-                    No ministries yet.
+                    No care groups yet.
                 </p>
             </field>
         </record>

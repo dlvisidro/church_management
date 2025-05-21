@@ -11,6 +11,7 @@ class CmmMember(models.Model):
 
     partner_id = fields.Many2one('res.partner', 'Partner', required=True, ondelete='cascade')
     ministry_ids = fields.Many2many("cmm.ministry", "cmm_member_ministry_rel", "member_id", "ministry_id")
+    care_group_id = fields.Many2one('cmm.care.group', 'Care Group')
 
     # Seminar attendance fields
     # These are Boolean fields, True if attended, False otherwise.
