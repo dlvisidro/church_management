@@ -15,8 +15,8 @@ class CmmMember(models.Model):
 
     # Seminar attendance fields
     # These are Boolean fields, True if attended, False otherwise.
-    has_attended_gc = fields.Boolean("Attended Gospel Clarity")
-    has_attended_ctoa = fields.Boolean("Attended Committing to One Another")
+    has_completed_gc = fields.Boolean("Completed Gospel Clarity")
+    has_completed_ctoa = fields.Boolean("Completed Committing to One Another")
 
     # Application form field
     # This is a Binary field to store file uploads (e.g., PDF, Word document).
@@ -46,7 +46,9 @@ class CmmMember(models.Model):
 
     birthday = fields.Date(string="Birthday")
     date_of_baptism = fields.Date(string="Baptism Date")
+    place_of_baptism = fields.Char()
     date_of_first_attendance = fields.Date(string="Date First Attended")
+    date_of_interview = fields.Date('Pastoral Interview')
     # Date of Membership field
     # This is a Date field to store the date when the person became a member.
     date_of_membership = fields.Date(string="Right Hand Of Fellowship")
