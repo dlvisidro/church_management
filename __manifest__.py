@@ -25,6 +25,7 @@
         'views/cmm_member_views.xml',
         'views/cmm_ministry.xml',
         'views/cmm_care_group_views.xml',
+        'views/cmm_pastoral_duty_views.xml',
         'views/menu.xml'
     ],
     # only loaded in demonstration mode

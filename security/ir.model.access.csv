@@ -3,3 +3,4 @@ access_res_partner_member_management,res.partner.member.management,base.model_re
 access_cmm_member_member_management,cmm.member.member.management,model_cmm_member,base.group_user,1,1,1,1
 access_cmm_member_ministry_management,cmm.member.ministry.management,model_cmm_ministry,base.group_user,1,1,1,1
 access_cmm_member_care_group_management,cmm.member.care.group.management,model_cmm_care_group,base.group_user,1,1,1,1
+access_cmm_member_pastoral_duty_management,cmm.member.pastoral.duty.management,model_cmm_pastoral_duty,base.group_user,1,1,1,1

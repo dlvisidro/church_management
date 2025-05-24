@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields # Import necessary Odoo modules
+from odoo import api, models, fields # Import necessary Odoo modules
 
 class CmmMember(models.Model):
     """
@@ -12,6 +12,10 @@ class CmmMember(models.Model):
     partner_id = fields.Many2one('res.partner', 'Partner', required=True, ondelete='cascade')
     ministry_ids = fields.Many2many("cmm.ministry", "cmm_member_ministry_rel", "member_id", "ministry_id")
     care_group_id = fields.Many2one('cmm.care.group', 'Care Group')
+
+    official_name = fields.Char(compute="_compute_official_name")
+    # TODO: THIS MUST BE UNIQUE
+    member_number = fields.Char()
 
     # Seminar attendance fields
     # These are Boolean fields, True if attended, False otherwise.
@@ -31,6 +35,8 @@ class CmmMember(models.Model):
     status = fields.Selection([
         ('applicant', 'Applicant'),          # A regular attendee who has applied for membership
         ('regular_attendee', 'Regular Attendee'), # An attedee who regularly attends service but has not applied for membership (yet)
+        ('dependent', 'Dependent'),          # An attendee, usually child of another attendee/member, who
+                                             #   attends only to accompany the attendee/member
         ('member', 'Member'),                # An attendee who has completed the application process
         ('past_member', 'Past Member')       # A member who has left the church
     ], string="Status", default='member', tracking=True) # Default status is 'member', tracking adds to chatter
@@ -66,3 +72,8 @@ class CmmMember(models.Model):
     street2 = fields.Char(related="partner_id.street2", inherited=True, readonly=False)
     city = fields.Char(related="partner_id.city", inherited=True, readonly=False)
     zip = fields.Char(related="partner_id.zip", inherited=True, readonly=False)
+
+    @api.depends('partner_id.name', 'designation')
+    def _compute_official_name(self):
+        for rec in self:
+            rec.official_name = f'Ptr. {rec.partner_id.name}' if  rec.designation == 'pastor' else rec.partner_id.name

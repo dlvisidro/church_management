@@ -5,4 +5,5 @@
 from . import cmm_care_group
 from . import cmm_member
 from . import cmm_ministry
+from . import cmm_pastoral_duty
 from . import res_partner

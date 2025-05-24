@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Form View -->
+        <record id="mm_pastoral_duty_form" model="ir.ui.view">
+            <field name="name">cmm.pastoral.duty.form</field>
+            <field name="model">cmm.pastoral.duty</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="pastor_id"/>
+                                <field name="type"/>
+                                <field name="groom"/>
+                                <field name="bride"/>
+                            </group>
+                            <group>
+                                <field name="type"/>
+                                <field name="venue"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- List View -->
+        <!-- <record id="cmm.pastoral.duty.list" model="ir.ui.view">
+            <field name="name">cmm.pastoral.duty.list</field>
+            <field name="model">cmm.pastoral.duty</field>
+            <field name="arch" type="xml">
+                <list>
+                    <field name="pastor_id"/>
+                    <field name="date"/>
+                    <field name="type"/>
+                </list>
+            </field>
+        </record> -->
+
+        <record id="action_pastoral_duties" model="ir.actions.act_window">
+            <field name="name">Duties</field>
+            <field name="res_model">cmm.pastoral.duty</field>
+            <field name="view_mode">list,form</field>
+            <field name="help" type="html">
+                <p class="o_view_no_content_smiling_face">
+                    No activities yet.
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

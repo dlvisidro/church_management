@@ -3,7 +3,7 @@
     <data>
         <menuitem 
             id="menu_member_root" 
-            name="Membership" 
+            name="Members" 
             sequence="10"/>
 
         <menuitem 
@@ -25,6 +25,23 @@
             name="Ministries" 
             parent="menu_member_root" 
             action="action_ministry" 
+            sequence="10"/>
+
+        <menuitem
+            id="menu_pastoral_duties_root"
+            name="Pastoral Duties"
+            sequence="11"/>
+
+        <menuitem
+            id="menu_pastoral_duties"
+            name="Pastoral Duties"
+            parent="menu_pastoral_duties_root"
+            action="action_pastoral_duties"
+            sequence="10"/>
+        
+        <menuitem
+            id="menu_service_root"
+            name="Service"
             sequence="10"/>
     </data>
 </odoo>

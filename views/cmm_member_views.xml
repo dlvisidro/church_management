@@ -39,6 +39,7 @@
                             <page string="Details">
                                 <group>
                                     <group>
+                                        <field name="member_number"/>
                                         <field name="status"/>
                                         <field name="date_of_membership" invisible="not (status in ['member', 'past_member'])"/>
                                         <field name="reason_for_leaving" invisible="status != 'past_member'"/>
@@ -81,13 +82,13 @@
             <field name="model">cmm.member</field>
             <field name="arch" type="xml">
                 <list>
-                    <field name="name"/>
+                    <field name="official_name"/>
+                    <field name="member_number"/>
                     <field name="status"/>
                     <field name="designation"/>
                     <field name="care_group_id"/>
                     <field name="email"/>
                     <field name="mobile"/>
-                    <field name="phone"/>
                     <field name="city"/>
                 </list>
             </field>
