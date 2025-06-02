@@ -11,9 +11,9 @@
                         <group>
                             <group>
                                 <field name="pastor_id"/>
-                                <field name="type"/>
                                 <field name="groom"/>
                                 <field name="bride"/>
+                                <field name="date"/>
                             </group>
                             <group>
                                 <field name="type"/>
@@ -26,7 +26,7 @@
         </record>
 
         <!-- List View -->
-        <!-- <record id="cmm.pastoral.duty.list" model="ir.ui.view">
+        <record id="cmm_pastoral_duty_list" model="ir.ui.view">
             <field name="name">cmm.pastoral.duty.list</field>
             <field name="model">cmm.pastoral.duty</field>
             <field name="arch" type="xml">
@@ -36,7 +36,7 @@
                     <field name="type"/>
                 </list>
             </field>
-        </record> -->
+        </record>
 
         <record id="action_pastoral_duties" model="ir.actions.act_window">
             <field name="name">Duties</field>
