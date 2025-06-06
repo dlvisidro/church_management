@@ -85,7 +85,10 @@
                     <field name="official_name"/>
                     <field name="member_number"/>
                     <field name="status"/>
-                    <field name="designation"/>
+                    <field name="designation" widget="badge"
+                        decoration-success="designation == 'deacon'"
+                        decoration-info="designation == 'member'"
+                        decoration-primary="designation == 'pastor'"/>
                     <field name="care_group_id"/>
                     <field name="email"/>
                     <field name="mobile"/>
