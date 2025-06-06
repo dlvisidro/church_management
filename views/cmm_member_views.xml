@@ -82,7 +82,7 @@
             <field name="model">cmm.member</field>
             <field name="arch" type="xml">
                 <list>
-                    <field name="official_name"/>
+                    <field name="official_name" string="Name"/>
                     <field name="member_number"/>
                     <field name="status"/>
                     <field name="designation" widget="badge"
