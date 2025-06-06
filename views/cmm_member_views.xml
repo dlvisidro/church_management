@@ -90,12 +90,12 @@
                         decoration-info="designation == 'member'"
                         decoration-primary="designation == 'pastor'"/>
                     <field name="care_group_id" widget="badge"
-                        decoration-success="care_group_id.id == 1"
-                        decoration-info="care_group_id.id == 2"
-                        decoration-warning="care_group_id.id == 3"
-                        decoration-danger="care_group_id.id == 4"
-                        decoration-primary="care_group_id.id == 5"
-                        decoration-muted="care_group_id.id == 6"
+                        decoration-success="care_group_id == 1"
+                        decoration-info="care_group_id == 2"
+                        decoration-warning="care_group_id == 3"
+                        decoration-danger="care_group_id == 4"
+                        decoration-primary="care_group_id == 5"
+                        decoration-muted="care_group_id == 6"
                     />
                     <field name="email"/>
                     <field name="mobile"/>
