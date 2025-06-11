@@ -87,7 +87,7 @@
                     <field name="status"/>
                     <field name="designation" widget="badge"
                         decoration-success="designation == 'deacon'"
-                        decoration-warning="designation == 'member'"
+                        decoration-muted="designation == 'member'"
                         decoration-primary="designation == 'pastor'"/>
                     <field name="care_group_id" widget="badge"
                         decoration-success="care_group_id == 1"
