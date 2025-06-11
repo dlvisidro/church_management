@@ -14,7 +14,7 @@
                                 <field name="description"/>
                             </group>
                             <group>
-                                <field name="in_charge"/>
+                                <field name="in_charge_id"/>
                             </group>
                         </group>
                         <label for="member_ids"/>
@@ -32,7 +32,7 @@
                 <list>
                     <field name="name"/>
                     <field name="description"/>
-                    <field name="in_charge"/>
+                    <field name="in_charge_id"/>
                 </list>
             </field>
         </record>
