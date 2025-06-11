@@ -1,6 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
+        <!-- Kanban View-->
+        <record id="view_cmm_member_kanban" model="ir.ui.view">
+            <field name="name">cmm.member.kanban</field>
+            <field name="model">cmm.member</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_global_click">
+                                <div class="o_kanban_image">
+                                    <field name="image_1920" widget="image"/>
+                                    <!-- <img alt="User Image" t-att-src="kanban_image('res.partner', 'image_128', record.id)" /> -->
+                                </div>
+                                <div class="o_kanban_card_content">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <strong class="o_kanban_record_title">
+                                                <field name="name"/>
+                                            </strong>
+                                            <span class="ms-2 text-small">
+                                                <field name="designation" widget="badge"
+                                                    decoration-success="designation == 'deacon'"
+                                                    decoration-primary="designation == 'pastor'"
+                                                    invisible="designation == 'member'"/>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <!-- Form View -->
         <record id="view_cmm_member_form" model="ir.ui.view">
             <field name="name">cmm.member.form</field>
             <field name="model">cmm.member</field>
@@ -107,7 +143,7 @@
         <record id="action_members" model="ir.actions.act_window">
             <field name="name">Members</field>
             <field name="res_model">cmm.member</field>
-            <field name="view_mode">list,form</field>
+            <field name="view_mode">list,form,kanban</field>
             <field name="context">{'default_is_church_member': True, 'default_is_company': False}</field>
             <field name="help" type="html">
                 <p class="o_view_nocontent_smiling_face">
